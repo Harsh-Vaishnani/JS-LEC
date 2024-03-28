@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form With Table</title>
+    <style>
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin: auto;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            border: 1px solid rgb(182, 182, 182);
+        }
+
+        th {
+            color: white;
+            background-color: #5894e2;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <form action="">
+            <label for="name">Name</label>
+            <input id="name" type="name"><br><br>
+
+            <label for="email">Email</label>
+            <input id="email" type="email"><br><br>
+
+            <label for="number">Phonenumber</label>
+            <input id="number" type="number"><br><br>
+
+            <label for="password">Password</label>
+            <input id="pass" type="password"><br><br>
+
+            <button id="btn">Submit</button>
+        </form>
+    </div>
+    <table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody id="tb"></tbody>
+        </table>
+</body>
+
+</html>
+<script>
+    let a = document.getElementById("name")
+    let b = document.getElementById("email")
+    let c = document.getElementById("number")
+    let d = document.getElementById("pass")
+    let e = document.getElementById("btn");
+    let f = document.getElementById("tb")
+    e.addEventListener("click", abc);
+    function abc(e) {
+        e.preventDefault();
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        td1.innerText = a.value;
+        let td2 = document.createElement("td");
+        td2.innerText = b.value;
+        let td3 = document.createElement("td");
+        td3.innerText = c.value;
+        let td4 = document.createElement("td");
+        td4.innerText = d.value;
+        tr.append(td1, td2, td3, td4);
+        f.append(tr);
+        a.value = "";
+        b.value = "";
+        c.value = "";
+        d.value = "";
+    }
+</script>

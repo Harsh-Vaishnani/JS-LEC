@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stringify</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr=[10,20,30];
+    localStorage.setItem("one",JSON.stringify(arr));
+    let b=JSON.parse(localStorage.getItem("one"));
+    console.log(b[0])
+  
+   
+</script>

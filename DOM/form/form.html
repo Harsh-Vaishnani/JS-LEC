@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="">
+        <input id="text" type="text" placeholder="Enter Your Name">
+        <br><br>
+        <input id="pass" type="password" placeholder="Enter Your Password">
+        <br><br>
+        <button id="btn">Submit</button>
+    </form>
+
+    </form>
+</body>
+</html>
+<script>
+    let a=document.getElementById("text");
+    let b=document.getElementById("pass");
+    let c=document.getElementById("btn");
+    
+    c.addEventListener("click",fun)
+    function fun(e){
+        e.preventDefault()
+        let data1=a.value;    
+        let data2=b.value;
+        console.log(data1);    
+        console.log(data2);    
+    }
+</script>

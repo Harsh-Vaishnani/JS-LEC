@@ -1,0 +1,70 @@
+
+<!--                                        First Form     -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-2</title>
+</head>
+<body>
+    <form action="" id="form">
+        <label id="one" for="name">Name :</label>
+        <input id="name" type="text">
+        <br><br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
+<script>
+    let a=document.getElementById("one");
+    let b=document.getElementById("name");
+
+    document.getElementById("form").addEventListener("submit",function(e){
+        e.preventDefault();
+        if(b.value==""){
+            alert("Please Fill It");
+        }
+        else{
+            console.log("Submited");
+        }
+    })
+</script> -->
+
+
+
+<!--                                        Second Form     -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label id="name" for="text">Name</label>
+        <input id="text" type="text"><br><br>
+        <button id="btn">Submit</button>
+    </form>
+</body>
+</html>
+<script>
+    let a=document.getElementById("name");
+    let b=document.getElementById("text");
+    let c=document.getElementById("btn");
+    c.addEventListener("click",abc);
+    function abc(e){
+        e.preventDefault();
+        if(b.value==""){
+            a.style.color="red";
+        }
+        else{
+            a.style.color="black";
+            console.log("Submited");
+        }
+    }
+</script>
