@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>option</title>
+</head>
+
+<body>
+    <form action="">
+       
+        <select name="" id="one">
+            <option value="a">Dhoni</option>
+            <option value="b">Jadeja</option>
+            <option value="c">Harsh</option>
+        </select>
+        <button id="btn">Sumbit</button>
+    </form>
+</body>
+
+</html>
+<script>
+    let a = document.getElementById("one");
+    let b = document.getElementById("btn");
+    b.addEventListener("click", abc);
+    function abc(e) {
+        e.preventDefault();
+        console.log(a.value);
+    }
+</script>
