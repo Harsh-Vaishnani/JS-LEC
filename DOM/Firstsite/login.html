@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .form {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .one {
+            width: 250px;
+            background-color: lightblue;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        #btn {
+            padding: 10px;
+            width: auto;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" class="form">
+        <span>Email : </span><input type="email" placeholder="Enter Your Email" class="one" id="email"><br><br>
+
+        <span>Password : </span><input type="password" placeholder="Enter Your Password" class="one"
+            id="password"><br><br>
+
+        <button id="btn">Submit ✅</button>
+    </form>
+</body>
+
+</html>
+<script>
+    let b = document.getElementById("email");
+    let c = document.getElementById("password");
+    let btn = document.getElementById("btn");
+    let final = JSON.parse(localStorage.getItem("one"));
+    btn.addEventListener("click", abc);
+
+    console.log(final);
+
+    function abc(e) {
+        e.preventDefault();
+        let em = b.value;
+        let ps = c.value;
+        if (arr.email == em && arr.password == ps) {
+            window.location.href = "index.html";
+        }
+        else {
+            alert("Wrong Data 😒");
+        }
+    }
+</script>

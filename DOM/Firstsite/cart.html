@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        #main {
+            width: 80%;
+            height: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+
+        div {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="main">
+
+        </div>
+    </main>
+</body>
+
+</html>
+<script>
+    let rw = JSON.parse(localStorage.getItem("crt")) || [];
+    let final = document.getElementById("main");
+    rw.forEach(function (ele, ind) {
+        let div = document.createElement("div");
+        let img = document.createElement("img");
+        img.src = ele.image;
+        let h3 = document.createElement("h3");
+        h3.innerText = ele.title;
+        let p = document.createElement("p");
+        p.innerText = ele.price;
+        div.append(img, h3, p);
+        final.append(div);
+    })
+</script>
