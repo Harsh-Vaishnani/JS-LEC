@@ -130,14 +130,14 @@
     // Ans=4
 
     let weight = +prompt("Enter the Body Weight => ");
-    let height = +prompt("Enter the Body Height => ");
-    let BMI = weight / height * height;
+    let height = +prompt("Enter the Body Height In Meter => ");
+    let BMI = weight / (height * height);
     console.log(BMI);
     if (BMI < 18.5) {
-        console.log("Under Weigth 👍");
+        console.log("Under Weigth");
     }
     else if (BMI > 18.5 && BMI <= 24.9) {
-        console.log("Normal");
+        console.log("Normal 👍");
     }
     else if (BMI >= 25 && BMI <= 29.9) {
         console.log("Over Weight");
@@ -145,6 +145,7 @@
     else {
         console.log("Obese");
     }
+
 
 
 </script>
