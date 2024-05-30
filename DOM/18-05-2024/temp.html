@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter </title>
+    <style>
+        a {
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .celc,
+        .fehn {
+            width: 350px;
+            height: 35px;
+            text-align: center;
+            margin: 15px;
+            font-size: 20px;
+            margin-right: 0px !important;
+        }
+
+        .main {
+            text-align: center;
+        }
+
+        span {
+            font-size: 30px;
+            margin: 0px 10px 0px 10px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .mainBtn {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            width: 90px;
+            height: 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Temperature Converter</h1>
+    <div class="main">
+        <input type="number" class="celc" placeholder="Temperature in Celcius"><span>&deg;C</span>
+        <span>=</span>
+        <input type="number" class="fehn" placeholder="Temperature in Fahrenheit"><span>&deg;F</span>
+    </div>
+    <div class="mainBtn">
+        <button class="btn">Reset</button>
+    </div>
+    <a href="incre-decre.html">Increment-Decrement</a>
+</body>
+
+</html>
+<script>
+
+    let fehn = document.querySelector(".fehn");
+    let celc = document.querySelector(".celc");
+    let btn = document.querySelector(".btn");
+    let main = document.querySelector(".main");
+
+
+    hehnHandler = () => {
+        ans = +(fehn.value - 32) * 0.5556;
+        celc.value = ans.toFixed(2);
+    }
+
+    celcHandler = () => {
+        ans1 = +(celc.value) * 1.8 + 32;
+        fehn.value = ans1.toFixed(2);
+
+    }
+    allReset = () => {
+        celc.value = "";
+        fehn.value = "";
+    }
+
+    btn.addEventListener("click", allReset);
+    fehn.addEventListener("input", hehnHandler);
+    celc.addEventListener("input", celcHandler);
+
+</script>

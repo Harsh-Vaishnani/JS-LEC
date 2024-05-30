@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teamperature Converter</title>
     <style>
-       
-          
-
         .tempCel {
             width: 400px;
             height: 120px;
@@ -20,7 +17,6 @@
             margin-bottom: 20px;
             border: 3px solid black;
             border-radius: 40px 0px 0px 0px;
-
         }
 
         .ans {
@@ -33,6 +29,7 @@
             margin: auto;
             border: 3px solid black;
             border-radius: 0px 0px 40px 0px;
+            box-shadow: 0px 25px 20px -20px rgba(192, 190, 190, 0.469), 25px 0 20px -20px rgba(192, 190, 190, 0.469)
         }
 
         .firstInput {
@@ -41,8 +38,9 @@
             text-align: center;
             font-size: 20px;
             border: 3px solid black;
-            font-weight: 500;
-            margin-top:7%;
+            font-weight: 600;
+            margin-top: 7%;
+            box-shadow: 0px -25px 20px -20px rgba(192, 190, 190, 0.469), -25px 0 20px -20px rgba(192, 190, 190, 0.469);
         }
 
         .btn {
@@ -54,14 +52,15 @@
             border-radius: 10px;
             line-height: 50px;
             height: 50px;
-            background-color: lightsteelblue;
+            background-color: #a8c5eb;
             margin: auto;
             margin-top: 20px;
             margin-bottom: 20px;
             border: 3px solid black;
         }
-        body{
-            background-color:darkseagreen;
+
+        body {
+            background-image: url("https://sjunkins.files.wordpress.com/2012/04/the-best-top-desktop-hd-dark-black-wallpapers-dark-black-wallpaper-dark-background-dark-wallpaper-23.jpg?w=900");
         }
     </style>
 </head>
@@ -71,12 +70,14 @@
         <input type="tel" class="firstInput" placeholder="Enter Temperature in Celsius">
     </div>
     <div class="btn">Convert</div>
-    <div class="main">
+    <div class="main" style="margin-top:5%;">
         <div class="tempCel">
             <p class="tempC"></p>
+            <p>Temperature in Celsius</p>
         </div>
         <div class="ans">
             <p class="tempF"></p>
+            <p>Temperature in Fahrenheit</p>
         </div>
     </div>
 </body>
@@ -84,13 +85,19 @@
 </html>
 <script>
     let btn = document.querySelector(".btn");
-    btn.addEventListener("click", abc);
+    let firstInput = document.querySelector(".firstInput");
+
+    firstInput.addEventListener("input", abc);
     function abc() {
         let firstInput = document.querySelector(".firstInput").value;
         let tempCel = document.querySelector(".tempCel");
         let ans = document.querySelector(".ans")
         let tempC = document.querySelector(".tempC");
         let tempF = document.querySelector(".tempF");
+
+        btn.style.backgroundColor = "#6c9edf";
+        btn.style.transition = "all 0.3s linear";
+
 
         let h4 = document.createElement("h4");
         h4.style.margin = "5px";

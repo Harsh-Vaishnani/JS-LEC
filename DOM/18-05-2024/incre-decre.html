@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment-Decrement</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .plus,
+        .minus {
+            cursor: pointer;
+            margin: 0px 20px 0px 20px;
+            width: 100px;
+            height: 35px;
+        }
+
+        .btn {
+            margin: 0px 20px 0px 20px;
+            font-size: 18px;
+            width: 110px;
+            text-align: center;
+        }
+
+        .num {
+            font-size: 22px;
+            padding-top: 5px;
+        }
+
+        .mainBtn {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Increment Decrement</h1>
+    <div class="main">
+        <button class="plus">➕</button>
+        <span class="num">0</span>
+        <button class="minus">➖</button>
+    </div>
+    <div class="mainBtn">
+        <button class="btn">Reset</button>
+    </div>
+    <a href="calc.html">Temperature Converter</a>
+
+</body>
+
+</html>
+<script>
+    let plus = document.querySelector(".plus");
+    let minus = document.querySelector(".minus");
+    let num = document.querySelector(".num");
+    let btn = document.querySelector(".btn");
+
+    incre = () => {
+        let ans = num.innerText++;
+        console.log(ans)
+    }
+
+    decre = () => {
+        if (num.innerText > 0) {
+            let ans = num.innerText--;
+            console.log(ans)
+        }
+    }
+    reSet = () => {
+        num.innerText = "0";
+    }
+
+    plus.addEventListener("click", incre);
+    minus.addEventListener("click", decre);
+    btn.addEventListener("click", reSet);
+</script>

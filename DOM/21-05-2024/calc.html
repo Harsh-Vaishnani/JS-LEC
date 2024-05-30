@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .main {
+            width: 400px;
+            height: auto;
+        }
+
+        .numbers {
+            width: 50px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .operators {
+            width: 50px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .display {
+            width: 220px;
+            height: 70px;
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="display"></div>
+        <div>
+            <button class="numbers">7</button>
+            <button class="numbers">8</button>
+            <button class="numbers">9</button>
+            <button class="operators">X</button>
+        </div>
+        <div>
+            <button class="numbers">4</button>
+            <button class="numbers">5</button>
+            <button class="numbers">6</button>
+            <button class="operators">-</button>
+        </div>
+        <div>
+            <button class="numbers">1</button>
+            <button class="numbers">2</button>
+            <button class="numbers">3</button>
+            <button class="operators">+</button>
+        </div>
+        <button class="numbers">0</button>
+        <button class="operators">=</button>
+        <button class="operators">.</button>
+        <button class="operators">Del</button>
+    </div>
+</body>
+
+</html>
+<script>
+    let resultInput = document.querySelector(".display")
+    let buttons = document.querySelectorAll(".numbers")
+    let operators = document.querySelectorAll(".operators")
+    // let clearButton = document.querySelector(".clear")
+    // let calculateBtn = document.querySelector(".calculate")
+
+    buttons.forEach((button) => {
+        // console.log(button.innerText)
+        button.addEventListener("click", () => {
+            // resultInput.value=resultInput.value+button.innerText
+            resultInput.innerText = +button.innerText + resultInput.innerText;
+            console.log(resultInput)
+        })
+    })
+
+    operators.forEach((operators) => {
+        operators.addEventListener("click", () => {
+            resultInput.innerText = operators.innerText + resultInput.innerText;
+        })
+    })
+
+
+
+</script>
