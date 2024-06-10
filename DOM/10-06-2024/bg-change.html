@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Background Color</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        #stopButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transform: translateY(40vh);
+        }
+    </style>
+</head>
+
+<body>
+    <button id="stopButton">Stop Color Change</button>
+
+</body>
+
+</html>
+<script>
+    let colorChangeInterval;
+
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function changeBackgroundColor() {
+        document.body.style.backgroundColor = getRandomColor();
+    }
+
+    function startColorChange() {
+        colorChangeInterval = setInterval(changeBackgroundColor, 1000);
+    }
+
+    function stopColorChange() {
+        clearInterval(colorChangeInterval);
+    }
+
+    document.getElementById('stopButton').addEventListener('click', stopColorChange);
+
+    // Start the color change when the page loads
+    startColorChange();
+</script>
