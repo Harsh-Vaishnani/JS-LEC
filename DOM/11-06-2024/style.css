@@ -3,12 +3,12 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    background-color: lightyellow;
 }
 
 header {
     background: #211635;
+    background: linear-gradient(to right,lightblue, lightyellow,lightblue);
     color: white;
     padding: 1rem;
     text-align: center;
@@ -43,7 +43,6 @@ nav button {
     text-align: center;
 }
 
-.product-list .product button {}
 
 form {
     display: flex;
@@ -89,10 +88,16 @@ input::placeholder {
 button {
     font-size: 16px;
     margin: 10px;
-    background-color: #373788;
-    padding: 5px;
+    background-color:lightblue;
+    padding: 10px;
     border: none;
     outline: none;
     border-radius: 7px;
-    color: #fff;
+    color:black;
+}
+.product{
+    border-radius: 20px;
+}
+.cart-item{
+    border-radius: 20px;
 }
