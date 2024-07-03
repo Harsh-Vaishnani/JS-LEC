@@ -4,31 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login page</title>
     <style>
-        body{
-            background-image: ;
+        body {
+            background-image: url("./wallpaperflare.com_wallpaper\ \(7\).jpg");
+            background-position: top;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            padding-top: 3%;
+            margin-bottom: 7%;
+        }
+
+        .main {
+            color: white;
+            margin: 3.5%;
+            font-size: 22px;
+            font-style: italic;
+            cursor: pointer;
+            width: 100px;
+            margin-top: 20px;
+        }
+
+        span {
+            color: white;
+            margin-right: 20px;
+            font-size: 18px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input {
+            width: 300px;
+            height: 30px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .main-1 {
+            color: black;
+            font-size: 22px;
+            font-style: italic;
+            cursor: pointer;
+            width: 100px;
+            background-color: lightgray;
+            padding: 7px;
+            border-radius: 20px;
+            margin: 20px auto auto auto;
+        }
+
+        label {
+            color: white;
+            display: grid;
+            font-size: 25px;
+            height: 30px;
+            line-height: 30px;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Login</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="signup.html">Signup</a>
-            <a href="cart.html">Cart</a>
-        </nav>
-    </header>
-    <form id="loginForm">
-        <label for="loginEmail">Email:</label>
-        <input type="email" id="loginEmail" name="email" required placeholder="Email">
-        <label for="loginPassword">Password:</label>
-        <input type="password" id="loginPassword" name="password" required placeholder="Password">
-        <button type="submit">Login</button>
-    </form>
-    <script src="script.js"></script>
+    <h1>Login</h1>
+    <div style="display: flex; justify-content: space-around;">
+        <div class="parent">
+            <div class="main">Home</div>
+            <div class="main">SignUp</div>
+            <div class="main">My Cart</div>
+        </div>
+        <form action="">
+            <label>Email</label>
+            <input type="text" placeholder="Enter Your Email">
+            <label>Password</label>
+            <input type="password" placeholder="Enter Your Password">
+            <div class="main-1">Login</div>
+        </form>
+    </div>
 </body>
 
 </html>

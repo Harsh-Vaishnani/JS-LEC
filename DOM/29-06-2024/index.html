@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API / Product Show in Display</title>
+    <style>
+        body {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="h1">loading...</h1>
+    <div class="main"></div>
+</body>
+
+</html>
+<script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        let div = document.querySelector(".main");
+        let h1 = document.querySelector(".h1");
+
+        setTimeout(() => {
+
+            fetch("https://fakestoreapi.com/products").then(res => (res.json())).then(product => {
+
+                product.forEach(element => {
+                    console.log(element);
+                    let child = document.createElement("div");
+
+                    child.innerHTML = `<img src="${element.image}" alt="${element.title}">`
+
+
+                    // let title = document.createElement("h3");
+                    // title.innerText = element.title;
+
+
+                    // child.append(title);
+                    // console.log(child);
+
+                    div.append(child);
+
+                });
+                h1.style.display = "none";
+            })
+
+        }, 1000)
+    });
+
+
+</script>
+
+<!-- 
+            fetch("https://fakestoreapi.com/products").then(res => (res.json())).then(product => {}
+
+    fetch (api link) .then ()
+
+
+    fetch ; oops 4 ( ) ;  async await ; promises ;
+    
+-->

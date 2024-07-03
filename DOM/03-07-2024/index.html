@@ -55,7 +55,7 @@
     <p class="header">City Weather Information</p>
     <form action="" id="form">
         <span>Enter City Name : </span>
-        <input type="text" id="cityName" /> <br />
+        <input type="text" style="height: 25px; font-size: 20px;" id="cityName" /> <br />
         <button type="submit">Get Information</button>
     </form>
     <div id="weatherInfo" style="text-align: center; margin-top: 20px"></div>
@@ -81,8 +81,7 @@
                 <p> ※ Description: ${data.weather[0].description} ※ </p>
                 <p> ※ Visibility: ${data.visibility} ※ </p>
                 <p> ※ Wind: ${data.wind.speed} km/h ※ </p>
-                
-`;
+                `;
             })
             .catch((err) => {
                 console.log(err);

@@ -8,12 +8,14 @@
     <style>
         body {
             background-image: linear-gradient(280deg,
-                    lightblue,white,lightblue);
+                    lightblue, white, lightblue);
         }
 
         th {
             font-size: 20px;
             text-align: center;
+            background-color: rgba(0, 0, 0, 0.769);
+            color: white;
         }
 
         h1 {
@@ -24,14 +26,24 @@
             color: black;
             text-shadow: 1px 1px red;
         }
-        #covidTableBody{
-            font-weight:500;
-            color:black;
+
+        #covidTableBody {
+            font-weight: 500;
+            color: black;
             text-align: center;
         }
-        table{
+
+        table {
             width: 80%;
             margin: auto;
+            box-shadow: 15px 15px 10px lightgrey;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(odd) {
+            background-color: lightgray;
         }
     </style>
 </head>
