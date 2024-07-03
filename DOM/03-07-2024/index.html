@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .weather {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .weather h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="weather">
+        <h2>Weather Information</h2>
+        <p id="weather-info">Loading...</p>
+    </div>
+
+    <script>
+        async function fetchWeatherData() {
+            const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
+            const city = 'London'; // You can change the city
+            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                const data = await response.json();
+                displayWeatherData(data);
+            } catch (error) {
+                document.getElementById('weather-info').textContent = 'Error fetching weather data: ' + error;
+            }
+        }
+
+        function displayWeatherData(data) {
+            const weatherInfo = `
+                <strong>City:</strong> ${data.name} <br>
+                <strong>Temperature:</strong> ${data.main.temp}°C <br>
+                <strong>Weather:</strong> ${data.weather[0].description}
+            `;
+            document.getElementById('weather-info').innerHTML = weatherInfo;
+        }
+
+        fetchWeatherData();
+    </script>
+</body>
+
+</html>
