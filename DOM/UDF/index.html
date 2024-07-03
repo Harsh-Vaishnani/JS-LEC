@@ -2,16 +2,143 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UDF</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Function Examples</title>
 </head>
 
 <body>
+    <h2>JavaScript Function Examples</h2>
 
+    <div>
+        <label for="inputPalindrome">Check Palindrome:</label>
+        <input type="text" id="inputPalindrome" />
+        <button onclick="checkPalindrome()">Check</button>
+        <p id="palindromeResult"></p>
+    </div>
+
+    <div>
+        <label for="inputLastDigits">Check Last Digits:</label><br />
+        <input type="number" id="inputLastDigits1" />
+        <input type="number" id="inputLastDigits2" />
+        <input type="number" id="inputLastDigits3" />
+        <button onclick="checkLastDigits()">Check</button>
+        <p id="lastDigitsResult"></p>
+    </div>
+
+    <div>
+        <label for="inputArmstrong">Check Armstrong Number:</label>
+        <input type="number" id="inputArmstrong" />
+        <button onclick="checkArmstrong()">Check</button>
+        <p id="armstrongResult"></p>
+    </div>
+
+    <div>
+        <label for="inputPrime">Check Prime Number:</label>
+        <input type="number" id="inputPrime" />
+        <button onclick="checkPrime()">Check</button>
+        <p id="primeResult"></p>
+    </div>
+
+    <script>
+
+        /*Que => 1.   Write a JavaScript program find palindrome  using function */
+
+        function checkPalindrome() {
+            let input = document.getElementById("inputPalindrome").value;
+            let result = document.getElementById("palindromeResult");
+
+            if (isPalindrome(input)) {
+                result.textContent = `${input} is a palindrome.`;
+            } else {
+                result.textContent = `${input} is not a palindrome.`;
+            }
+        }
+
+        function isPalindrome(str) {
+            for (let i = 0; i < Math.floor(str.length / 2); i++) {
+                if (str[i] !== str[str.length - 1 - i]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        /*Que => 2.   Write a JavaScript program to check the last digit same OR not using UDF.(User Input
+         Three Integer Numbers). */
+
+        function checkLastDigits() {
+            let num1 = parseInt(document.getElementById("inputLastDigits1").value);
+            let num2 = parseInt(document.getElementById("inputLastDigits2").value);
+            let num3 = parseInt(document.getElementById("inputLastDigits3").value);
+            let result = document.getElementById("lastDigitsResult");
+
+            if (lastDigitsSame(num1, num2, num3)) {
+                result.textContent = `Last digits of ${num1}, ${num2}, and ${num3} are the same.`;
+            } else {
+                result.textContent = `Last digits of ${num1}, ${num2}, and ${num3} are different.`;
+            }
+        }
+
+        function lastDigitsSame(num1, num2, num3) {
+            const lastDigit1 = num1 % 10;
+            const lastDigit2 = num2 % 10;
+            const lastDigit3 = num3 % 10;
+
+            return lastDigit1 === lastDigit2 && lastDigit2 === lastDigit3;
+        }
+
+        /*Que => 3.   Check Armstrong Number of Three Digits Using UDF. */
+
+        function checkArmstrong() {
+            let num = parseInt(document.getElementById("inputArmstrong").value);
+            let result = document.getElementById("armstrongResult");
+
+            if (isArmstrongNumber(num)) {
+                result.textContent = `${num} is an Armstrong number.`;
+            } else {
+                result.textContent = `${num} is not an Armstrong number.`;
+            }
+        }
+
+        function isArmstrongNumber(num) {
+            let numStr = num.toString();
+            let numDigits = numStr.length;
+            let sum = 0;
+
+            for (let digit of numStr) {
+                sum += Math.pow(parseInt(digit), numDigits);
+            }
+
+            return sum === num;
+        }
+
+
+        /*Que => 4. Check Prime Number or Not Using Function. */
+
+        function checkPrime() {
+            let num = parseInt(document.getElementById("inputPrime").value);
+            let result = document.getElementById("primeResult");
+
+            if (isPrime(num)) {
+                result.textContent = `${num} is a prime number.`;
+            } else {
+                result.textContent = `${num} is not a prime number.`;
+            }
+        }
+
+        function isPrime(num) {
+            if (num <= 1) {
+                return false;
+            }
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
 </body>
 
 </html>
-<script>
-    
-</script>
