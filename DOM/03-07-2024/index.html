@@ -2,60 +2,90 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather API</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-image: linear-gradient(280deg,
+                    lightblue,
+                    rgb(227, 227, 212));
         }
 
-        .weather {
-            margin-top: 50px;
+        .header {
+            font-family: cursive;
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+            color: brown;
+            text-shadow: 1px 1px lightslategray;
+        }
+
+        form {
             text-align: center;
         }
 
-        .weather h2 {
-            margin-bottom: 20px;
+        button {
+            margin: 30px 0px 23px 0px;
+            padding: 7px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        span {
+            font-size: 20px;
+            font-family: monospace;
+        }
+
+        h2 {
+            font-size: 25px;
+            text-decoration: underline;
+            font-style: italic;
+        }
+
+        p {
+            font-size: 22px;
+            font-weight: 500;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
     </style>
 </head>
 
 <body>
-    <div class="weather">
-        <h2>Weather Information</h2>
-        <p id="weather-info">Loading...</p>
-    </div>
-
-    <script>
-        async function fetchWeatherData() {
-            const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
-            const city = 'London'; // You can change the city
-            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-            try {
-                const response = await fetch(apiUrl);
-                if (!response.ok) {
-                    throw new Error('Network response was not ok ' + response.statusText);
-                }
-                const data = await response.json();
-                displayWeatherData(data);
-            } catch (error) {
-                document.getElementById('weather-info').textContent = 'Error fetching weather data: ' + error;
-            }
-        }
-
-        function displayWeatherData(data) {
-            const weatherInfo = `
-                <strong>City:</strong> ${data.name} <br>
-                <strong>Temperature:</strong> ${data.main.temp}°C <br>
-                <strong>Weather:</strong> ${data.weather[0].description}
-            `;
-            document.getElementById('weather-info').innerHTML = weatherInfo;
-        }
-
-        fetchWeatherData();
-    </script>
+    <p class="header">City Weather Information</p>
+    <form action="" id="form">
+        <span>Enter City Name : </span>
+        <input type="text" id="cityName" /> <br />
+        <button type="submit">Get Information</button>
+    </form>
+    <div id="weatherInfo" style="text-align: center; margin-top: 20px"></div>
 </body>
 
 </html>
+<script>
+    let form = document.querySelector("#form");
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        let cityName = document.querySelector("#cityName").value;
+
+        let apiKey = "9fcdc72c6a81841508afbe6f85a76cdb";
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+        fetch(url)
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data)
+                let weatherInfo = document.querySelector("#weatherInfo");
+                weatherInfo.innerHTML = `
+                <h2>Weather in ${data.name}</h2>
+                <p> ※ Temperature: ${data.main.temp} °C ※ </p>
+                <p> ※ Description: ${data.weather[0].description} ※ </p>
+                <p> ※ Visibility: ${data.visibility} ※ </p>
+                <p> ※ Wind: ${data.wind.speed} km/h ※ </p>
+                
+`;
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    });
+</script>
