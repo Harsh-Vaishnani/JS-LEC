@@ -73,7 +73,7 @@
         fetch(url)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data)
+                console.log(data);
                 let weatherInfo = document.querySelector("#weatherInfo");
                 weatherInfo.innerHTML = `
                 <h2>Weather in ${data.name}</h2>
@@ -81,6 +81,7 @@
                 <p> ※ Description: ${data.weather[0].description} ※ </p>
                 <p> ※ Visibility: ${data.visibility} ※ </p>
                 <p> ※ Wind: ${data.wind.speed} km/h ※ </p>
+                
                 `;
             })
             .catch((err) => {

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input {
+            width: 20%;
+            height: 25px;
+        }
+
+        button {
+            width: 5%;
+            height: 25px;
+            margin-top: 20px;
+        }
+
+        #email {
+            margin-bottom: 10px;
+            border: ridge;
+            border-color: lightslategrey;
+        }
+
+        #password {
+            border: ridge;
+            border-color: lightslategrey;
+        }
+
+        p {
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <form action="" id="login-form">
+        <p>Email</p>
+        <input type="text" id="email" placeholder="Enter Your Email Adress"> <br>
+        <p>Password</p>
+        <input type="password" id="password" placeholder="Enter Your Password"> <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
+<script>
+
+    document.getElementById("login-form").addEventListener("submit", onsubmit);
+    function onsubmit(e) {
+
+        e.preventDefault();
+
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        let validpassword = localStorage.getItem(email);
+        // console.log(validpassword);
+        if (validpassword != password) {
+            alert("Enter correct password");
+            return
+        }
+        alert("Login successfuly")
+
+        window.location.href = ("index.html");
+
+    }
+
+</script>

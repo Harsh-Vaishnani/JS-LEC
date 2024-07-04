@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input {
+            width: 20%;
+            height: 25px;
+        }
+
+        button {
+            width: 5%;
+            height: 25px;
+            margin-top: 20px;
+        }
+
+        #email {
+            margin-bottom: 10px;
+            border: ridge;
+            border-color: lightslategrey;
+        }
+
+        #password {
+            border: ridge;
+            border-color: lightslategrey;
+        }
+
+        p {
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SignUp</h1>
+    <form action="" id="signup-form">
+        <p>Email</p>
+        <input type="text" id="email" placeholder="Enter Your Email Adress"> <br>
+        <p>Password</p>
+        <input type="password" id="password" placeholder="Enter Your Password"> <br>
+        <p>Confirm Password</p>
+        <input type="password" id="confirmpassword" placeholder="Confirm Your Password"> <br>
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+
+</html>
+<script>
+    document.getElementById('signup-form').addEventListener('submit', onsubmit);
+    
+    function onsubmit(e) {
+
+        e.preventDefault();
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        //Email validation ke liye Regex ka use kiya heyy
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        //Password validation ke liye Regex ka use kiya heyy
+
+        const minLength = 8;
+        const hasUpperCase = /[A-Z]/.test(password);
+        const hasLowerCase = /[a-z]/.test(password);
+        const hasNumbers = /\d/.test(password);
+        const hasSpecialChars = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+        let ConfirmPassword = document.getElementById("confirmpassword").value;
+        if (!emailRegex.test(email)) {
+            alert("Email Not Valid");
+            return;
+        }
+        if (!(
+            password.length >= minLength &&
+            hasUpperCase &&
+            hasLowerCase &&
+            hasNumbers &&
+            hasSpecialChars
+        )) {
+            alert("Password Not Valid");
+        }
+        if (password != ConfirmPassword) {
+            // console.log("BOTH NOT ARE SAME");
+            alert("Both Must be Same ⚠️");
+            // function close krne ke liye return likha hey 
+            return;
+        }
+
+        localStorage.setItem(email, password);
+
+        window.location.href = ("login.html");
+    }
+</script>
