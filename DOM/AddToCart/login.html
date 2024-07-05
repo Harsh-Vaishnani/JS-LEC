@@ -6,12 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        h1 {
-            text-align: center;
+        body {
+            background-image: url("./Images/wallpaperflare.com_wallpaper\ \(7\).jpg");
+            width: 100%;
+            background-size: cover;
+            box-sizing: border-box;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+
         }
 
-        form {
+        h1 {
             text-align: center;
+            margin-bottom: 35px;
         }
 
         input {
@@ -20,9 +29,21 @@
         }
 
         button {
-            width: 5%;
-            height: 25px;
+            width: 7%;
+            height: 35px;
             margin-top: 20px;
+            border: 2px solid black;
+            font-size: 17px;
+            border-style: dashed;
+            cursor: pointer;
+            background-color: rgba(211, 211, 211, 0.403);
+        }
+
+        button:hover {
+            background-color: rgba(255, 160, 122, 0.249);
+            font-weight: 600;
+            font-size: 19px;
+            border: none;
         }
 
         #email {
@@ -38,19 +59,31 @@
 
         p {
             margin: 0px;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-family: system-ui;
+        }
+
+        .main {
+            height: 80vh;
+            align-items: center;
+            display: grid;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <h1>Login</h1>
-    <form action="" id="login-form">
-        <p>Email</p>
-        <input type="text" id="email" placeholder="Enter Your Email Adress"> <br>
-        <p>Password</p>
-        <input type="password" id="password" placeholder="Enter Your Password"> <br>
-        <button type="submit">Submit</button>
-    </form>
+    <div class="main">
+        <form action="" id="login-form">
+            <h1>Login</h1>
+            <p>Email</p>
+            <input type="text" id="email" placeholder="Enter Your Email Adress"> <br>
+            <p>Password</p>
+            <input type="password" id="password" placeholder="Enter Your Password"> <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 
 </html>

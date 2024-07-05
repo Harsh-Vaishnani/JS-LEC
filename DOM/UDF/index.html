@@ -10,6 +10,7 @@
             text-align: center;
             justify-content: center;
             display: grid;
+            background-color: lightblue;
         }
 
         h2 {
@@ -36,13 +37,19 @@
 
         input {
             width: 300px;
-
+            margin-top: 7px;
         }
 
         label {
             font-size: 18px;
             font-weight: 500;
         }
+
+        button{
+            border: 2px solid black;
+            padding: 3px 10px 3px 10px;
+            font-size: 14px;
+        } 
 
         /* number ke side arrow remove krne ke liye  */
 
@@ -65,9 +72,9 @@
     </div>
 
     <div class="lastDegit">
-        <label for="inputLastDigits">Check Last Digits:</label><br />
-        <input type="number" id="inputLastDigits1" /> <br> <br>
-        <input type="number" id="inputLastDigits2" /> <br> <br>
+        <label for="inputLastDigits">Check Last Digits Same or Not:</label><br />
+        <input type="number" id="inputLastDigits1" /> <br>
+        <input type="number" id="inputLastDigits2" /> <br>
         <input type="number" id="inputLastDigits3" /> <br>
         <button onclick="checkLastDigits()">Check</button>
         <p id="lastDigitsResult"></p>
@@ -104,8 +111,8 @@
             } else {
                 result.textContent = `${input} is not a palindrome.`;
             }
-            result.style.fontSize="18px";
-            result.style.fontFamily="monospace";
+            result.style.fontSize = "18px";
+            result.style.fontFamily = "monospace";
         }
 
         function isPalindrome(str) {
@@ -137,8 +144,8 @@
             } else {
                 result.textContent = `Last digits of ${num1}, ${num2}, and ${num3} are different.`;
             }
-            result.style.fontSize="18px";
-            result.style.fontFamily="monospace";
+            result.style.fontSize = "18px";
+            result.style.fontFamily = "monospace";
         }
 
         function lastDigitsSame(num1, num2, num3) {
@@ -163,8 +170,8 @@
             } else {
                 result.textContent = `${num} is not an Armstrong number.`;
             }
-            result.style.fontSize="18px";
-            result.style.fontFamily="monospace";
+            result.style.fontSize = "18px";
+            result.style.fontFamily = "monospace";
         }
 
         function isArmstrongNumber(num) {
@@ -194,8 +201,8 @@
             } else {
                 result.textContent = `${num} is not a prime number.`;
             }
-            result.style.fontSize="18px";
-            result.style.fontFamily="monospace";
+            result.style.fontSize = "18px";
+            result.style.fontFamily = "monospace";
         }
 
         function isPrime(num) {
@@ -208,7 +215,7 @@
                 }
             }
             return true;
-           
+
         }
     </script>
 </body>
