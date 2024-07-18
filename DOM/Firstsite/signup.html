@@ -1,68 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-    <style>
-        form {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .one {
-            width: 250px;
-        }
-
-        .three {
-            padding: 10px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-
-<body>
-    <form action="">
-        <label for="name">Name :</label>
-        <input type="name" id="name" class="one"><br><br>
-        <label for="email">Email :</label>
-        <input type="email" id="email" class="one"><br><br>
-        <label for="password">Password :</label>
-        <input type="password" id="password" class="one"><br><br>
-        <button id="btn" class="three">Submit✅</button>
-    </form>
-</body>
-
-</html>
-<script>
-    let a = document.getElementById("name");
-    let b = document.getElementById("email");
-    let c = document.getElementById("password");
-    let d = document.getElementById("btn");
-    d.addEventListener("click", abc);
-    function abc(e) {
-        e.preventDefault();
-        if (a.value == "") {
-            alert("Fill the Name");
-        }
-        else if (b.value == "") {
-            alert("Fill the Email");
-        }
-        else if (c.value == "") {
-            alert("Fill the Password");
-        }
-        else {
-            let obj = {
-                name: a.value,
-                email: b.value,
-                password: c.value,
-            }
-            localStorage.setItem("one", JSON.stringify(obj));
-            window.location.href = "login.html";
-        }
-    }
-</script> -->
 
 
 <!DOCTYPE html>
@@ -109,33 +45,6 @@
 </body>
 
 </html>
-<script>
-    let a = document.getElementById("name");
-    let b = document.getElementById("email");
-    let c = document.getElementById("password");
-    let btn = document.getElementById("btn");
-    btn.addEventListener("click", abc);
-    let arr = [];
-    function abc(e) {
-        e.preventDefault();
-        if (a.value == "") {
-            alert("Fill the Name");
-        }
-        else if (b.value == "") {
-            alert("Fill the Email");
-        }
-        else if (c.value == "") {
-            alert("Fill the Password");
-        }
-        else {
-            let obj = {
-                name: a.value,
-                email: b.value,
-                password: c.value,
-            }
-            arr.push(obj);
-            localStorage.setItem("one",JSON.stringify(arr));
-            window.location.href="login.html";
-        }
-    }
+<script src="signup.js">
+   
 </script>

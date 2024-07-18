@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.plus,
+.minus {
+    cursor: pointer;
+    margin: 0px 20px 0px 20px;
+    width: 100px;
+    height: 35px;
+}
+
+.btn {
+    margin: 0px 20px 0px 20px;
+    font-size: 18px;
+    width: 110px;
+    text-align: center;
+}
+
+.num {
+    font-size: 22px;
+    padding-top: 5px;
+}
+
+.mainBtn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+}

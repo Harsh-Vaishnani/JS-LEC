@@ -1,0 +1,51 @@
+a {
+    text-decoration: none;
+}
+
+.plus,
+.minus,
+.multi,
+.divide {
+    cursor: pointer;
+    margin: 20px 10px 0px 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.first {
+    text-align: center;
+    width: 200px;
+    height: 35px;
+    font-size: 17px;
+}
+
+.second {
+    text-align: center;
+    width: 200px;
+    height: 35px;
+    font-size: 17px;
+
+}
+
+.btn {
+    width: auto;
+    height: auto;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.jjj {
+    text-align: center;
+}
+
+.reSet {
+    font-size: 20px;
+    margin-left: 20px;
+    color: red;
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+}

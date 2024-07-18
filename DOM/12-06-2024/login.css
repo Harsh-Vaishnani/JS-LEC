@@ -1,0 +1,59 @@
+body {
+    background-image: url("./wallpaperflare.com_wallpaper\ \(7\).jpg");
+    background-position: top;
+    overflow: hidden;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    padding-top: 3%;
+    margin-bottom: 7%;
+}
+
+.main {
+    color: white;
+    margin: 3.5%;
+    font-size: 22px;
+    font-style: italic;
+    cursor: pointer;
+    width: 100px;
+    margin-top: 20px;
+}
+
+span {
+    color: white;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.main-1 {
+    color: black;
+    font-size: 22px;
+    font-style: italic;
+    cursor: pointer;
+    width: 100px;
+    background-color: lightgray;
+    padding: 7px;
+    border-radius: 20px;
+    margin: 20px auto auto auto;
+}
+
+label {
+    color: white;
+    display: grid;
+    font-size: 25px;
+    height: 30px;
+    line-height: 30px;
+}

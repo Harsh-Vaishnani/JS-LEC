@@ -4,81 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Form</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-      }
-
-      .container {
-        max-width: 400px;
-        margin: 50px auto;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      h2 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .form-group {
-        margin-bottom: 20px;
-      }
-
-      label {
-        display: block;
-        margin-bottom: 5px;
-      }
-
-      input {
-        width: 100%;
-        padding: 8px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-      }
-
-      input[type="submit"] {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      input[type="submit"]:hover {
-        background-color: #0056b3;
-      }
-      table {
-        width: 60%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        margin: auto;
-        text-align: center;
-      }
-
-      th,
-      td {
-        padding: 8px;
-        border-bottom: 1px solid #ddd;
-        text-align: center;
-        border: 1px solid rgb(182, 182, 182);
-      }
-
-      th {
-        color: white;
-        background-color: #5894e2;
-      }
-    </style>
+<link rel="stylesheet" href="index.css">
   </head>
   <body>
     <div class="container">
@@ -129,51 +55,6 @@
   </body>
 
 </html>
-<script>
-  let name = document.getElementById("name");
-  let email = document.getElementById("email");
-  let phone = document.getElementById("phone");
-  let password = document.getElementById("password");
-  let tb = document.getElementById("tb");
-  let arr = [];
-  document.getElementById("myForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    let obj = {
-      name: name.value,
-      email: email.value,
-      phone: phone.value,
-      password: password.value,
-    };
-
-    arr.push(obj);
-    display(arr);
-  });
-
-  function display(a) {
-    tb.innerHTML = "";
-    for (let i = 0; i < a.length; i++) {
-      console.log(a[i]);
-      let tr = document.createElement("tr");
-      let td1 = document.createElement("td");
-      td1.innerText = a[i].name;
-
-      let td2 = document.createElement("td");
-      td2.innerText = a[i].email;
-
-      let td3 = document.createElement("td");
-      td3.innerText = a[i].phone;
-
-      let td4 = document.createElement("td");
-      td4.innerText = a[i].password;
-      let td5=document.createElement("td") ;
-      td5.innerText="❌" ;
-      td5.style.cursor="pointer" ;
-      td5.addEventListener("click",function(e){
-       e.target.parentNode.remove() ;
-      })
-      tr.append(td1, td2, td3, td4 ,td5);
-      tb.append(tr);
-      
-    }
-  }
+<script src="index.js">
+  
 </script>
