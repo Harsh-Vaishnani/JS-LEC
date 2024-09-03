@@ -149,7 +149,7 @@
 // console.log(min);
 
 // let arr = [[1, 2, -33, 400, 5],[6, 7, -8, 9, 10]];
-// let max= -Infinity; 
+// let max= -Infinity;
 // for(let i=0; i<2; i++){
 //     for (let j=0; j<5; j++){
 //         if(arr[i][j]>max){
@@ -158,3 +158,31 @@
 //     }
 // }
 // console.log(max)
+
+// let a = 10;
+// let b = 20;
+// a = a + b;
+// // console.log("First a", a);
+// b = a - b;
+// // console.log("Second b",b);
+// a = a - b;
+// // console.log("Third a", a);
+// console.log("A => ", a);
+// console.log("B => ", b);
+
+// let a=10;
+// let b=20;
+// let c=a;
+// a=b;
+// b=c;
+// console.log(a);
+// console.log(b);
+
+// let a=10;
+// let b=3;
+// console.log(Math.floor(a/b));
+// console.log(Math.ceil(a/b));
+// console.log(Math.round(a/b));
+
+
+

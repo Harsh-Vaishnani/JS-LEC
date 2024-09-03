@@ -1,7 +1,0 @@
-if else  => big small number in three Variables.
-switch => Month Count.
-for loop => sum , print .
-while loop => sum , print.
-do while => sum , print.
-array => sum , odd/even , add(2) , delete , reverse , min/max(2) , modify , add 
-2D array => sum , odd/even , min/max 
