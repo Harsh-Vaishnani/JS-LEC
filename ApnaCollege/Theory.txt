@@ -7,4 +7,7 @@ array => sum , odd/even , add(2) , delete , reverse , min/max(2) , modify , add.
 2D array => sum , odd/even , min/max.
 swapping value => 3variables , 2variables.
 floor ceil round => practice and use.
+object => bracket , dot notation , Array , forIn loop(key value find).
+function => 
+
 

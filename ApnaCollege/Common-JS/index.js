@@ -184,5 +184,46 @@
 // console.log(Math.ceil(a/b));
 // console.log(Math.round(a/b));
 
+// let obj = {
+//   name: "Harsh",
+//   lastname: "vaishnani",
+//   age: "21",
+//   gender: "male",
+//   state:{
+//     state:"Junagadh",
+//     final:"Ahmdabad",
+//   }
+// };
+// console.log(obj.state.final)
 
+// let obj={
+//     name:"Harsh",
+//     lastname:"vaishnani",
+//     age:21
+// }
+// for(let key in obj){
+//     console.log(obj[key])
+// }
 
+// let obj2={
+//     name:"Rahul",
+//     age:'21',
+//     gender:"Female"
+// }
+// for(let key in obj2){
+//     console.log(obj2)
+// }
+// console.log(obj2)
+
+// function fun(a, b) {
+//   return (sum = a + b);
+// }
+// fun(1, 2);
+// console.log(sum);
+
+let fun = (a, b) => {
+  sum = a + b;
+  return sum;
+};
+fun(7, 8);
+console.log(sum);
