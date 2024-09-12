@@ -221,9 +221,31 @@
 // fun(1, 2);
 // console.log(sum);
 
-let fun = (a, b) => {
-  sum = a + b;
-  return sum;
-};
-fun(7, 8);
-console.log(sum);
+// let fun = (a, b) => {
+//   sum = a + b;
+//   return sum;
+// };
+// fun(7, 8);
+// console.log(sum);
+
+// function sum(a,b){
+//     console.log(a+b)
+// }
+// sum(10,20)
+
+// function greet (name){
+//     console.log("Hello",name,"Welcome to my Laptop")
+// }
+// greet ("Vinod")
+// greet ("Ram")
+
+// let result = function sum(a,b){
+//     console.log(a+b)
+// }
+// result(10,20)
+
+function sum(a, b) {
+  return a + b;
+}
+let ans = sum(10, 20);
+console.log(ans)
