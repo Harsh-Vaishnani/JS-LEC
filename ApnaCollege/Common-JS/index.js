@@ -244,8 +244,107 @@
 // }
 // result(10,20)
 
-function sum(a, b) {
-  return a + b;
-}
-let ans = sum(10, 20);
-console.log(ans)
+// function sum(a, b) {
+//   return a + b;
+// }
+// let ans = sum(10, 20);
+// console.log(ans)
+
+// 🐦‍🔥    🐦‍🔥    🐦‍🔥    🐦‍🔥
+
+// function sum(a, b) {
+//   return a + b;
+// }
+// let ans = sum(10, 20);
+// console.log(ans);
+
+// function factorial(a){
+//   for(let i=1; i<=a; i++){
+
+//   }
+// }
+// factorial(8)
+
+// function factorial(a) {
+//   let result = 1;
+//   for(let i=1; i<=a ; i++){
+//     result = result * i;
+//   }
+//   return result
+// }
+// console.log(factorial(10))
+
+// let fname="Harsh";
+// let lname="Patel";
+// let fullName=`${fname} ${lname}`
+// console.log(fullName);
+
+// let age=21;
+// console.log("I am ",age,"Years Old");
+// console.log(`I am ${age} Years Old`);
+
+// let myFunction = function (a,b) {
+//   return a+b;
+// }
+// console.log(myFunction(5,10));
+
+// let fun = (a, b) => {
+//   return (`Both Number ${a} and ${b} Sum is = ${a+b}`);
+// };
+// console.log(fun(51, 21));
+
+// let calc = (n1,n2,ope) => {
+//   if(ope === '+'){
+//     return n1+n2;
+//   }
+//   else if(ope === '-'){
+//     return n1-n2;
+//   }
+//   else if(ope === '/'){
+//     return n1/n2;
+//   }
+// }
+// console.log(calc (10,20,'+'));
+// console.log(calc (10,20,'-'));
+// console.log(calc (10,20,'/'));
+
+// let ans = 0;
+// let fun = (a) => {
+//   for (i = a.length - 1; i >= 0; i--) {
+//     let ans = a[i];
+//   console.log(a[i])
+//   }
+// };
+// fun([1, 2, 3, 4, 5]);
+
+// let arr = [1, 2, 3, 4, 5];
+// for (i=arr.length-1 ; i>=0 ; i--) {
+//   console.log(arr[i]);
+// }
+
+// let reveseString = (str) => {
+//   let reverse = "";
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     reverse = reverse + str[i];
+//   }
+//   return reverse
+// };
+// console.log(reveseString("Hay Harsh"));
+
+
+//Palindrome
+
+// let fun = (str) => {
+//   let ans = "";
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     ans += str[i];
+//   }
+//   // if (str === ans) {
+//   //   console.log("True");
+//   // } else {
+//   //   console.log("False");
+//   // }
+//   let Ternaryy = (str === ans) ? "True" : "False"
+//   console.log(Ternaryy)
+// };
+// fun("radar");
