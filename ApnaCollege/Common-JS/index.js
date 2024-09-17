@@ -331,7 +331,6 @@
 // };
 // console.log(reveseString("Hay Harsh"));
 
-
 //Palindrome
 
 // let fun = (str) => {
@@ -348,3 +347,168 @@
 //   console.log(Ternaryy)
 // };
 // fun("radar");
+
+// let arr =["mango","Grapes","watermelon","banana","lichi","orange"];
+// for (const ele of arr) {
+//     console.log( ele);
+// }
+
+// let arr =["mango","Grapes","watermelon","banana","lichi","orange"];
+// for (const ele in arr) {
+//     console.log(ele)
+// }
+
+// let arr =["mango","Grapes","watermelon","banana","lichi","orange"];
+// arr.forEach((ele,ind,arr)=>{
+//     console.log(ele)
+//     console.log(ind)
+//     console.log(arr)
+// })
+
+// let arr = ["mango", "Grapes", "watermelon", "banana", "lichi", "orange"];
+// arr.map((ele, ind, arr) => {
+//   console.log(`${ele} ${ind}`);
+// });
+
+// const num = [1,2,3,4,5];
+// const ans = num.map((ele,ind,num) => {
+//     return ele*2
+// })
+// console.log(ans)
+
+// let arr=[1,2,3,4,5,6,7,8,9,10];
+// arr.pop();
+// arr.push(11)
+// arr.shift()
+// arr.unshift(0)
+// arr.splice(1,3)
+// console.log(arr)
+
+// let months=["Jan","march","April","June"];
+// months.push("December");
+// months.splice(months, 2,"Marchh")
+// console.log(months.splice());
+// console.log(months)
+
+// let months=["Jan","march","April","June"];
+// let ans = months.indexOf("march");
+// months.splice(ans ,1, "Marchhh");
+// console.log(months);
+
+//  let months=["Jan","march","April","June"];
+//  months.pop();
+//  console.log(months)
+
+// Add
+
+// let arr=["One","Two","three","Five","Six"];
+// arr.push("Seven");
+// console.log(arr);
+
+// arr.splice(0,1);
+// arr.pop()
+// console.log(arr)
+
+// arr.findIndex(("three"));
+// console.log(arr)
+
+// let months = ["Jan", "December", "march", "April", "June"];
+// let ans = months.indexOf("march");
+
+// months.splice(ans,1,"March");
+// console.log(months);
+
+// let ans = months.indexOf("April");
+// months.splice(ans,1)
+// console.log(months)
+
+// let arr = [1, 2, 3, 4, 5, 4, 6, 7, 6, 8, 9, 2, 10];
+// let ans=arr.find((ele,ind,arr)=> {
+//     return ele>5;
+// })
+// console.log(ans)
+
+// let ans = arr.findIndex((ele,ind,arr)=>{
+//     return ele>7;
+// })
+// console.log(ans)
+
+// let ans = arr.filter((ele, ind, arr) => {
+//   if ( ele>5 && ele % 2 === 0) {
+//     return ele;
+//   }
+// });
+// console.log(ans);
+
+// let num = 6;
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 6, 9, 10];
+// let ans = arr.filter((ele, ind, arr) => {
+//  return ele !== num
+// });
+// console.log(ans);
+
+// const products = [
+//   { name: "Laptop", price: "1200" },
+//   { name: "Phone", price: "800" },
+//   { name: "Tablet", price: "300" },
+//   { name: "Watch", price: "150" },
+// ];
+
+// let ans = products.filter((ele, ind, products) => {
+//   return ele.price <=500
+// });
+// console.log(ans)
+
+// let number = [1, 2, 3, 4, 6, 5, 6, 7, 8, 2, 9, 10];
+// let ans = number.filter((ele, ind, num) => {
+
+// });
+// console.log(ans)
+
+// let number = [1, 2, 3, 4, 6, 5, 6, 7, 8, 2, 9, 10];
+// number.sort((a,b)=>{
+//     if(a>b) return -1;
+//     if(b>a) return 1;
+// })
+// console.log(number)
+
+// let num = [4, 7, 2, 9, 1, 6, 8, 3];
+// num.sort((a, b) => {
+//   if (a > b) return -1;
+//   if (b > a) return 1;
+// });
+
+// let ans = num.map((ele) => {
+//   return ele * ele;
+// });
+// console.log(ans);
+
+// let words=["apple","banana","cherry","date"];
+// let ans = words.map((ele)=>{
+//     return ele.toUpperCase ();
+// })
+// console.log(ans)
+
+// let numbers = [1, 2, 3, 4, 5];
+// let ans = numbers
+//   .map((ele) => {
+//     if (ele % 2 === 0) {
+//       return ele * ele;
+//     }
+//   })
+//   .filter((ele) => {
+//     return ele !== undefined;
+//   });
+// console.log(ans);
+
+// let names =["one","two","three"];
+// let ans = names.map((ele)=>{
+//     return `Mr. ${ele}`;
+// })
+// console.log(ans)
+
+let numbers = [133, 242, 3645, 4467, 543];
+let ans = numbers.reduce((accu,ele,ind,num)=>{
+    return accu+ele;
+},0)
+console.log(ans)
