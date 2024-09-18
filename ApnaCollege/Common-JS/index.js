@@ -507,8 +507,37 @@
 // })
 // console.log(ans)
 
-let numbers = [133, 242, 3645, 4467, 543];
-let ans = numbers.reduce((accu,ele,ind,num)=>{
-    return accu+ele;
-},0)
-console.log(ans)
+// let numbers = [133, 242, 3645, 4467, 543];
+// let ans = numbers.reduce((accu,ele,ind,num)=>{
+//     return accu+ele;
+// },0)
+// console.log(ans)
+
+// let str="Harsh Vaishnani";
+// let ans = str.indexOf("V");
+// console.log(ans)
+
+// let arr  = Array.from(str);
+// console.log(arr);
+
+// let ans = arr.map((ele,ind)=>{
+//     return (`${ele} ${ind}`)
+// })
+// console.log(ans)
+
+
+// let str="Harsh Vaishnani";
+// let ans =  str.includes("i");
+// console.log(ans)
+
+// let arr=["1","2","3","4"];
+// console.log(arr.includes("5"));
+
+
+// let myName="Harsh Vaishnani";
+// let ans = myName.slice(2,8);
+// console.log(ans)
+
+
+// let alpha = "The quick brown fox jumps ove the lazy dog";
+
