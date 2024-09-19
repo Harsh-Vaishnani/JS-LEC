@@ -1,0 +1,14 @@
+Todo List Using JavaScript
+
+functionality 👇
+ 
+Add Task ✅
+Edit Task ✅
+Delete Task ✅
+Sort by Aplhabets 
+Sort by Date
+Search Functionality 
+Local Storage 
+Responsive Design 
+Dark/Light Mode 
+Due Date and Notifications 
