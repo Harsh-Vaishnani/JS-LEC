@@ -6,7 +6,7 @@ Add Task ✅
 Edit Task ✅
 Delete Task ✅
 Sort by Aplhabets 
-Sort by Date
+Sort by Date 
 Search Functionality 
 Local Storage 
 Responsive Design 

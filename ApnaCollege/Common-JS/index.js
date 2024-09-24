@@ -525,7 +525,6 @@
 // })
 // console.log(ans)
 
-
 // let str="Harsh Vaishnani";
 // let ans =  str.includes("i");
 // console.log(ans)
@@ -533,11 +532,161 @@
 // let arr=["1","2","3","4"];
 // console.log(arr.includes("5"));
 
-
 // let myName="Harsh Vaishnani";
 // let ans = myName.slice(2,8);
 // console.log(ans)
 
-
 // let alpha = "The quick brown fox jumps ove the lazy dog";
 
+// Function to fetch time from an API and display in required format
+
+// Ans -1 👇
+// async function displayDateTime() {
+//   try {
+//     const response = await fetch(
+//       "http://worldtimeapi.org/api/timezone/Asia/Kolkata"
+//     );
+//     const data = await response.json();
+
+//     const days = [
+//       "Sunday",
+//       "Monday",
+//       "Tuesday",
+//       "Wednesday",
+//       "Thursday",
+//       "Friday",
+//       "Saturday",
+//     ];
+
+//     const apiTime = new Date(data.datetime);
+
+//     const localTime = new Date();
+
+//     const timeDiff = apiTime.getTime() - localTime.getTime();
+
+//     setInterval(() => {
+//       const currentTime = new Date(new Date().getTime() + timeDiff);
+
+//       const day = days[currentTime.getDay()];
+//       let hours = currentTime.getHours();
+//       const minutes = currentTime.getMinutes();
+//       const seconds = currentTime.getSeconds();
+
+//       const ampm = hours >= 12 ? "PM" : "AM";
+//       hours = hours % 12;
+//       hours = hours ? hours : 12;
+
+//       const minuteStr = minutes < 10 ? "0" + minutes : minutes;
+//       const secondStr = seconds < 10 ? "0" + seconds : seconds;
+
+//       document.getElementById(
+//         "clock"
+//       ).innerHTML = `Today is: ${day}.<br>Current time is: ${hours} ${ampm} : ${minuteStr} : ${secondStr}`;
+//     }, 1000);
+//   } catch (error) {
+//     console.error("Error fetching the time data", error);
+//   }
+// }
+// displayDateTime();
+
+// Ans - 4 👇
+// const a = 5;
+//     const b = 6;
+//     const c = 7;
+
+//     const s = (a + b + c) / 2;
+//     const area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+
+//     document.getElementById("triangle-area").innerHTML = "Area of the triangle is: " + area.toFixed(2);
+
+// Ans -8 👇
+
+// let arrMin = [4, 2, 3, -1, 5, 7];
+
+// let min = Infinity;
+
+// for(let i = 0; i < arrMin.length; i++) {
+//   if(arrMin[i] < min) {
+//     min = arrMin[i];
+//   }
+// }
+
+// console.log("The minimum number is: " + min);
+
+// let arrMax = [4, 2, 3, -1, 5, 7];
+// let max = -Infinity;
+
+// for (let i = 0; i < arrMax.length; i++) {
+//   if (arrMax[i] > max) {
+//     max = arrMax[i];
+//   }
+// }
+
+// console.log("The maximum number is: " + max);
+
+// Ans - 15 👇
+
+// var arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+
+// arr1.sort(function(a, b) {
+//   return a - b;
+// });
+
+// console.log(arr1);
+
+// Ans - 14 👇
+
+// let rows = 5;
+
+// for (let i = 1; i <= rows; i++) {
+//   let pattern = "";
+//   for (let j = 1; j <= i; j++) {
+//     pattern += "* ";
+//   }
+//   console.log(pattern);
+// }
+
+// Ans - 6 👇
+
+// function celsiusToFahrenheit(c) {
+//   return (c * 9) / 5 + 32;
+// }
+
+// function fahrenheitToCelsius(f) {
+//   return ((f - 32) * 5) / 9;
+// }
+
+// let celsius = 60;
+// let fahrenheit = 45;
+
+// let convertedToF = celsiusToFahrenheit(celsius);
+// let convertedToC = fahrenheitToCelsius(fahrenheit);
+
+// console.log(celsius + "°C is " + convertedToF + " °F");
+// console.log(fahrenheit + "°F is " + convertedToC + " °C");
+
+// Ans - 12 👇
+
+// for (let i = 0; i <= 15; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i + " is even");
+//   } else {
+//     console.log(i + " is odd");
+//   }
+// }
+
+// Ans - 11 👇
+
+// let largest = Math.max(-5, -2, -6, 0, -1);
+
+// alert("The largest number is: " + largest);
+
+// Ans - 10 👇
+
+// let numbers = [0, -1, 4];
+
+// numbers.sort(function(a, b) {
+//   return b - a; // Sort in descending order
+// });
+
+// alert("Sorted numbers: " + numbers.join(", "));

@@ -62,10 +62,16 @@ let myEvent = () => {
 
     sort.addEventListener("click", (e) => {
       e.preventDefault();
-      sortArr = ["bb", "aa", "ee", "cc"];
-      // sortArr = [h2.innerHTML];
-      // sortArr.sort((a,b)=>a.toLocaleLowerCase().localeCompare(b.toLowerCase()));
-      console.log(sortArr);
+      sortArr.push(h2.innerHTML);
+      sortArr.sort((a, b) =>
+        a.toLocaleLowerCase().localeCompare(b.toLowerCase())
+      );
+      // let lastSubArr = sortArr[sortArr.length-1];
+      // let lastEle = lastSubArr[lastSubArr.length-1];
+      // console.log(lastEle)
+      parentDiv.append(sortArr);
+      body.append(parentDiv);
+      console.log([sortArr]);
     });
   } else {
     alert("Serch Feild is Empty");
@@ -76,7 +82,3 @@ btn.addEventListener("click", (e) => {
   e.preventDefault();
   myEvent();
 });
-
-// let sortArr = ["banana","duck","Zara","apple","cat"];
-// sortArr.sort((a,b)=>a.toLocaleLowerCase().localeCompare(b.toLowerCase()));
-// console.log(sortArr);

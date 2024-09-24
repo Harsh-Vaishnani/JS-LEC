@@ -1,0 +1,10 @@
+To-Do List App
+Weather App
+Quiz App
+Memory Card Game
+Calculator App
+Recipe Finder
+Expense Tracker
+Pomodoro Timer
+Image Carousel
+Markdown Previewer
